@@ -1,0 +1,32 @@
+@import url('https://fonts.google.com/specimen/Rubik');
+
+// Colors
+$Very-dark-gray: hsl(0, 0%, 17%);
+$Dark-gray: hsl(0, 0%, 59%);
+
+:root {
+  // light mode
+  --bg-color: #{$Dark-gray};
+  --text-color: #{$Very-dark-gray};
+
+  color-scheme: light dark;
+  font-size: 18px;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// dark mode
+.dark-mode {
+  --bg-color: #{$Very-dark-gray};
+  --text-color: #{$Dark-gray};
+}
+
+// Adapts to the user's system preferred color scheme, specifically for dark mode
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #{$Very-dark-gray};
+    --text-color: #{$Dark-gray};
+  }
+}
