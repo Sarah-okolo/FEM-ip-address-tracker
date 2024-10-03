@@ -38,10 +38,17 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/Sarah-okolo/FEM-rest-countries-api-with-color-theme-switcher)
+- Live Site URL: [Add live site URL here](https://track-that-ip.netlify.app/)
 
 ## My process
+
+- Created new Vite + React project.
+- Installed Sass as a dependency.
+- Initialized git repo and pushed project to GitHub.
+- Created general styles for the app.
+- Deployed project to live site in Netlify.
+- 
 
 ### Built with
 
@@ -50,7 +57,7 @@ Users should be able to:
 - Flexbox
 - [React](https://reactjs.org/) - JS library
 - [Vite.js](https://vite.org/) - Local dev server
-- [Sass](https://sass-lang.com/) - For styles
+- [Sass](https://sass-lang.com/) - CSS pre-processor
 
 **Note: These are just examples. Delete this note and replace the list above with your own choices**
 

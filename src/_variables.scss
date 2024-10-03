@@ -1,13 +1,16 @@
-@import url('https://fonts.google.com/specimen/Rubik');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
 // Colors
-$Very-dark-gray: hsl(0, 0%, 17%);
+$Very-light-gray: hsl(0, 1%, 92%);
+$Very-dark-gray: hsl(0, 1%, 14%);
 $Dark-gray: hsl(0, 0%, 59%);
+$Light-gray: hsl(0, 2%, 77%);
 
 :root {
   // light mode
-  --bg-color: #{$Dark-gray};
+  --bg-color: #{$Very-light-gray};
   --text-color: #{$Very-dark-gray};
+  --faint-text: #{$Dark-gray};
 
   color-scheme: light dark;
   font-size: 18px;
@@ -20,13 +23,15 @@ $Dark-gray: hsl(0, 0%, 59%);
 // dark mode
 .dark-mode {
   --bg-color: #{$Very-dark-gray};
-  --text-color: #{$Dark-gray};
+  --text-color: #{$Very-light-gray};
+  --faint-text: #{$Light-gray};
 }
 
 // Adapts to the user's system preferred color scheme, specifically for dark mode
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-color: #{$Very-dark-gray};
-    --text-color: #{$Dark-gray};
-  }
-}
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --bg-color: #{$Very-dark-gray};
+//     --text-color: #{$Very-light-gray};
+//     --faint-text: #{$Light-gray};
+//   }
+// }
