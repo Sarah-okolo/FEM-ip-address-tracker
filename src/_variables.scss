@@ -2,7 +2,7 @@
 
 // Colors
 $Very-light-gray: hsl(0, 1%, 92%);
-$Very-dark-gray: hsl(0, 1%, 14%);
+$Very-dark-gray: hsl(0, 1%, 19%);
 $Dark-gray: hsl(0, 0%, 59%);
 $Light-gray: hsl(0, 2%, 77%);
 
@@ -11,6 +11,7 @@ $Light-gray: hsl(0, 2%, 77%);
   --bg-color: #{$Very-light-gray};
   --text-color: #{$Very-dark-gray};
   --faint-text: #{$Dark-gray};
+  --bx-shadow: rgb(210, 210, 210);
 
   color-scheme: light dark;
   font-size: 18px;
@@ -25,6 +26,7 @@ $Light-gray: hsl(0, 2%, 77%);
   --bg-color: #{$Very-dark-gray};
   --text-color: #{$Very-light-gray};
   --faint-text: #{$Light-gray};
+  --bx-shadow: rgb(60, 60, 60);
 }
 
 // Adapts to the user's system preferred color scheme, specifically for dark mode
@@ -33,5 +35,10 @@ $Light-gray: hsl(0, 2%, 77%);
 //     --bg-color: #{$Very-dark-gray};
 //     --text-color: #{$Very-light-gray};
 //     --faint-text: #{$Light-gray};
+//     --bx-shadow: rgb(60, 60, 60);
 //   }
 // }
+
+.rootReactVNB {
+  display: none !important;
+}
