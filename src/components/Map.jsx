@@ -1,4 +1,5 @@
-import React, { useRef } from 'react'
+import React, { useRef, useContext, useEffect } from 'react'
+import {ipLocationContext} from '../contexts'
 import '../component-styles/map.scss'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
@@ -19,17 +20,24 @@ L.Icon.Default.mergeOptions({
 
 
 function Map() {
-  const locationCenter = [51.505, -0.09];
-  const defaultZoom = 14;
   const mapRef = useRef(null);
+  const {locationCoordinates} = useContext(ipLocationContext);
+  const locationCenter = [locationCoordinates.x, locationCoordinates.y];
+  const defaultZoom = 13;
 
-  // Reset to default center and zoom
+  // Reset map to default center and zoom
   const resetMapView = () => {
     const map = mapRef.current;
     if (map) {
       map.setView(locationCenter, defaultZoom);
     }
   };
+
+  // Update map when a new ip location is returned. 
+  useEffect(() => {
+    resetMapView();
+  }, [locationCoordinates]);
+
   
   return (
     <>
@@ -44,13 +52,11 @@ function Map() {
           zoomControl={false} 
           doubleClickZoom={true}
           dragging={true} >
-
           <TileLayer 
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" 
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           />
-
-          <Marker position={[51.505, -0.09]} >
+          <Marker position={locationCenter} >
             <Popup>IP address location</Popup>
           </Marker>
         </MapContainer>

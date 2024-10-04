@@ -12,21 +12,26 @@
 
 #reset-btn {
   position: absolute;
-  top: 10px;
+  top: -40px;
   right: 10px;
   padding: 5px 8px;
   background-color: var(--bg-color);
   color: var(--text-color);
   font-weight: 600;
+  border: none;
   border-radius: 7px;
   cursor: pointer;
-  box-shadow: 0px 3px 10px var(--bx-shadow);
+  box-shadow: 0px 1px 10px var(--bx-shadow);
   z-index: 1000;
   outline: none;
+
+  &:hover {
+    opacity: .8;
+  }
 }
 
 @media screen and (max-width: 900px){
   #reset-btn {
-    top: 88%;
+    top: 90%;
   }
 }

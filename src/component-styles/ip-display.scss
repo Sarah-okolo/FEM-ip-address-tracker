@@ -24,7 +24,7 @@ h1 {
 }
 
 #search-box {
-  width: 85%;
+  width: 80%;
   max-width: 500px;
   display: flex;
   margin: 0 auto;
@@ -36,11 +36,33 @@ h1 {
 
 #search-input {
   background-color: transparent;
+  font-size: .9rem;
   width: 100%;
   color: $Very-dark-gray;
   outline: none;
   border: none;
   padding: 10px 0 10px 15px;
+}
+
+#loading {
+  width: 5px;
+  height: 5px;
+  display: none;
+  border: 2px solid rgb(87, 87, 87);
+  border-right: none;
+  border-radius: 50%;
+  padding: 7px;
+  margin: auto 0 auto 10px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 #send-box {
@@ -55,6 +77,14 @@ h1 {
   }
 }
 
+#error-message {
+  color: hsl(0, 100%, 50%);
+  font-size: .8rem;
+  text-align: center;
+  margin-top: 10px;
+  display: none;
+}
+
 #ip-details-container {
   width: 70%;
   background-color: var(--bg-color);
@@ -62,7 +92,7 @@ h1 {
   grid-template-columns: repeat(4, 1fr);
   color: var(--text-color);
   position: relative;
-  top: 60px;
+  top: 45px;
   margin: 0 auto;
   padding: 20px 0;
   border-radius: 10px;
@@ -89,16 +119,16 @@ h1 {
 
 @media screen and (max-width: 900px){
   #ip-display-container {
-    max-height: 50vh;
+    max-height: 30vh;
   }
 
   #content-wrapper {
-    padding: 0 15px;
+    padding: 0 20px;
   }
 
   h1 {
     color: $Very-light-gray;
-    font-size: 1.9rem;
+    font-size: 1.5rem;
     text-align: center;
     margin: 20px 0;
   }
